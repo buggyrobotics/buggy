@@ -418,7 +418,7 @@ The Nav2 stack includes:
 
 ---
 
-## ⚙ Configuration Reference
+##  Configuration Reference
 
 ### Diff Drive Controller — `config/diff_drive_controller.yaml`
 
