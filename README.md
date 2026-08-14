@@ -40,7 +40,7 @@
 
 ---
 
-## 🔍 Overview
+## Overview
 
 The **Buggy** package provides everything needed to operate the Nvis 3302ARD rover — a compact, differential-drive robot designed for indoor crowd navigation and autonomous exploration.
 
