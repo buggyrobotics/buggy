@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/Build-ament__cmake-lightgrey?logo=cmake&logoColor=white" alt="Build">
 </p>
 
-<h1 align="center">🤖 Buggy — Nvis 3302ARD Autonomous Rover</h1>
+<h1 align="center"> Buggy — Nvis 3302ARD Autonomous Rover</h1>
 
 <p align="center">
   <strong>A complete ROS 2 package for the Nvis 3302ARD differential-drive rover — from URDF description and Gazebo simulation to real-hardware SLAM mapping and autonomous Nav2 navigation.</strong>
@@ -13,7 +13,7 @@
 
 ---
 
-## 📑 Table of Contents
+##  Table of Contents
 
 - [Overview](#-overview)
 - [Hardware Platform](#-hardware-platform)
@@ -60,7 +60,7 @@ The **Buggy** package provides everything needed to operate the Nvis 3302ARD rov
 
 ---
 
-## 🔩 Hardware Platform
+##  Hardware Platform
 
 ### Chassis & Mechanical Assembly
 
@@ -142,18 +142,18 @@ The rover is equipped with a **budget-class 2D LiDAR** mounted on top of the cha
 | Property | Default Value | Configurable | Source |
 |---|---|---|---|
 | Sensor type | 2D GPU LiDAR | — | Gazebo `gpu_lidar` plugin |
-| Min range | 0.12 m | ✅ `range_min` | `lidar.urdf.xacro` |
-| Max range | 8.0 m | ✅ `range_max` | `lidar.urdf.xacro` |
-| Update rate | 5.0 Hz | ✅ `update_rate` | `lidar.urdf.xacro` |
-| Horizontal FOV | 360° (6.283 rad) | ✅ `horizontal_fov` | `lidar.urdf.xacro` default |
-| Angular resolution | ~1° (360 samples) | ✅ `samples` | `lidar.urdf.xacro` |
+| Min range | 0.12 m |  `range_min` | `lidar.urdf.xacro` |
+| Max range | 8.0 m |  `range_max` | `lidar.urdf.xacro` |
+| Update rate | 5.0 Hz |  `update_rate` | `lidar.urdf.xacro` |
+| Horizontal FOV | 360° (6.283 rad) |  `horizontal_fov` | `lidar.urdf.xacro` default |
+| Angular resolution | ~1° (360 samples) |  `samples` | `lidar.urdf.xacro` |
 | Range resolution | 0.01 m | — | Gazebo `<resolution>` |
 | Noise model | Gaussian | — | `lidar.urdf.xacro` |
-| Noise std. deviation | 0.02 m | ✅ `range_noise_stddev` | `lidar.urdf.xacro` |
+| Noise std. deviation | 0.02 m |  `range_noise_stddev` | `lidar.urdf.xacro` |
 | Vertical FOV | 0° (single ray) | — | Explicit single-ray config |
 | Mount shape | Cylinder (puck) | — | URDF visual |
-| Mount radius | 20 mm | ✅ `mount_radius` | `lidar.urdf.xacro` |
-| Mount height | 20 mm | ✅ `mount_height` | `lidar.urdf.xacro` |
+| Mount radius | 20 mm |  `mount_radius` | `lidar.urdf.xacro` |
+| Mount height | 20 mm |  `mount_height` | `lidar.urdf.xacro` |
 | Sensor mass | 20 g | — | URDF inertial |
 | Mount position | Top of chassis + 30 mm standoff | — | `lidar_standoff` property |
 | ROS topic | `/scan` | — | `gz_ros2_bridge` / launch config |
@@ -267,7 +267,7 @@ buggy/
 
 ---
 
-## ✅ Prerequisites
+##  Prerequisites
 
 | Requirement | Version |
 |---|---|
@@ -298,7 +298,7 @@ sudo apt update && sudo apt install -y \
 
 ---
 
-## 📦 Installation
+##  Installation
 
 ```bash
 # 1. Create or use an existing ROS 2 workspace
@@ -320,7 +320,7 @@ source install/setup.bash
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 > **Reminder:** Run `source ~/ros2_ws/install/setup.bash` in every new terminal.
 
@@ -459,7 +459,7 @@ The Nav2 stack includes:
 
 ---
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 | Issue | Cause | Fix |
 |---|---|---|
@@ -472,7 +472,7 @@ The Nav2 stack includes:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Here's how to get started:
 
@@ -486,7 +486,7 @@ Please follow [Conventional Commits](https://www.conventionalcommits.org/) for c
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the **Apache License 2.0** — see the [LICENSE](LICENSE) file for details.
 
