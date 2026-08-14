@@ -64,25 +64,28 @@ The **Buggy** package provides everything needed to operate the Nvis 3302ARD rov
 
 ### Chassis & Mechanical Assembly
 
-The Nvis 3302ARD uses a rectangular box chassis with the following measured dimensions:
+The Nvis 3302ARD features a **circular chassis** (when viewed from the top) — a compact, disc-shaped body ideal for crowd navigation.
 
 ```
-                    300 mm
-        ┌─────────────────────────┐
-        │                         │
-        │      ┌───────────┐      │
-        │      │           │      │
- 300 mm │      │  CHASSIS  │      │  Height: 200 mm
-        │      │  (1.0 kg) │      │
-        │      │           │      │
-        │      └───────────┘      │
-        │                         │
-        └─────────────────────────┘
+                  ⌀ ~300 mm
+              ╭─────────────╮
+           ╭──╯             ╰──╮
+          │                     │
+         │       ┌───────┐       │
+         │       │ LiDAR │       │   Height: 200 mm
+         │       │ puck  │       │
+         │       └───────┘       │
+          │     CHASSIS          │
+           ╰──╮   (1.0 kg)  ╭──╯
+              ╰─────────────╯
 ```
+
+> **Note:** The URDF approximates the chassis as a 300 × 300 mm box for simulation collision geometry, but the physical robot has a circular profile with a collision radius of 140 mm.
 
 | Property | Value | Source |
 |---|---|---|
-| Chassis dimensions (L × W × H) | 300 × 300 × 200 mm | `nvis_3302ard.urdf.xacro` |
+| Chassis profile | Circular (top view) | Physical hardware |
+| URDF collision box (L × W × H) | 300 × 300 × 200 mm | `nvis_3302ard.urdf.xacro` |
 | Total robot mass | 1.0 kg | `nvis_3302ard.urdf.xacro` |
 | Chassis mass (computed) | 0.75 kg | `total_mass - 2×wheel_mass - caster_mass` |
 | Ground clearance | 5 mm | `chassis_ground_clearance` property |
@@ -175,18 +178,17 @@ When instantiated in the main robot description (`nvis_3302ard.urdf.xacro`), the
 ```
               ← 180 mm →
          ┌──┐           ┌──┐
-         │LW│           │RW│    Wheel ⌀ 65 mm
-         └──┘           └──┘    Wheel width 26 mm
+         │LW│           │RW│     Wheel ⌀ 65 mm
+         └──┘           └──┘     Wheel width 26 mm
            ╲      ↑      ╱
             ╲     │     ╱
-             ╲    │    ╱
-              ╲   │   ╱
-               ╲  │  ╱
-       ─────────[BASE]─────────  base_link (at axle height)
-                  │
-                  │  70 mm
-                  │
-                 (●)             Caster ⌀ 24 mm
+         ╭───╲────│────╱───╮
+        │     ╲   │   ╱     │
+        │      ╲  │  ╱      │    ⌀ ~300 mm
+        │───────[BASE]──────│    (circular chassis)
+        │         │         │
+        │         │ 70 mm   │
+         ╰───────(●)───────╯     Caster ⌀ 24 mm
                                  µ ≈ 0 (free-sliding)
 
        ▲ Forward (+X)
