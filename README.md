@@ -493,5 +493,5 @@ This project is licensed under the **Apache License 2.0** — see the [LICENSE](
 ---
 
 <p align="center">
-  Made with ❤️ by the <a href="https://github.com/buggyrobotics">Buggy Robotics</a> team
+  Made by the <a href="https://github.com/buggyrobotics">Buggy Robotics</a> team
 </p>
