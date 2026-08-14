@@ -196,7 +196,7 @@ When instantiated in the main robot description (`nvis_3302ard.urdf.xacro`), the
 
 ---
 
-## 🏗 Software Architecture
+##  Software Architecture
 
 ### TF Frame Tree
 
@@ -240,7 +240,7 @@ Key topic relay: Nav2 publishes on `/cmd_vel` → a `topic_tools/relay` node for
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 buggy/
